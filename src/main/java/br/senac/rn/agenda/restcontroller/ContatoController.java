@@ -24,4 +24,9 @@ public class ContatoController {
         service.salvar(contato);
     }
 
+    @GetMapping("{fone}")
+    public List<Contato> listarPorFone(@PathVariable String fone) {
+        return service.listarPorFone(fone);
+    }
+
 }

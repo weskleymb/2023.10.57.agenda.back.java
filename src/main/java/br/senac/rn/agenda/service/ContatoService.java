@@ -22,4 +22,8 @@ public class ContatoService {
         return repository.findAll();
     }
 
+    public List<Contato> listarPorFone(String fone) {
+        return repository.findByFone(fone);
+    }
+
 }
