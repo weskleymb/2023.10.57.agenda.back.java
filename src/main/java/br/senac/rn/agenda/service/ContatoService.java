@@ -26,4 +26,8 @@ public class ContatoService {
         return repository.findByFone(fone);
     }
 
+    public Contato buscarContatoPorId(Integer id) {
+        return repository.findById(id).get();
+    }
+
 }
