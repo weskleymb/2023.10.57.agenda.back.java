@@ -5,9 +5,9 @@ import lombok.*;
 
 import java.util.Objects;
 
+@Data
 @Entity
 @Table(name = "TB_CONTATOS")
-@Data
 public class Contato {
 
     @Id
