@@ -29,4 +29,18 @@ public class ContatoController {
         return service.listarPorFone(fone);
     }
 
+    @PutMapping("{id}")
+    public void editar(@PathVariable Integer id, @RequestBody Contato contatoEditado) {
+        Contato contato = service.listarPorId(id);
+        contato.setNome(contatoEditado.getNome());
+        contato.setFone(contatoEditado.getFone());
+        contato.setEmail(contatoEditado.getEmail());
+        service.salvar(contato);
+    }
+
+    @DeleteMapping("{id}")
+    public void excluir(@PathVariable Integer id) {
+        service.excluir(id);
+    }
+
 }
