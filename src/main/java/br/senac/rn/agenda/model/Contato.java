@@ -3,8 +3,6 @@ package br.senac.rn.agenda.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Objects;
-
 @Data
 @Entity
 @Table(name = "TB_CONTATOS")

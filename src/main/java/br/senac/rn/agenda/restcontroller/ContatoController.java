@@ -2,7 +2,6 @@ package br.senac.rn.agenda.restcontroller;
 
 import br.senac.rn.agenda.model.Contato;
 import br.senac.rn.agenda.service.ContatoService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,8 +10,11 @@ import java.util.List;
 @RequestMapping("contatos")
 public class ContatoController {
 
-    @Autowired
-    private ContatoService service;
+    private final ContatoService service;
+
+    public ContatoController(ContatoService service) {
+        this.service = service;
+    }
 
     @GetMapping
     public List<Contato> listarTodos() {
