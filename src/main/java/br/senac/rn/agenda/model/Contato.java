@@ -16,8 +16,8 @@ public class Contato {
     @Column(name = "CON_NOME", length = 100)
     private String nome;
 
-    @Column(name = "CON_FON_ID")
     @ManyToOne
+    @JoinColumn(name = "CON_FON_ID")
     private Fone fone;
 
     @Column(name = "CON_EMAIL", length = 200)
