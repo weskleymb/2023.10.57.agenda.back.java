@@ -16,7 +16,7 @@ public class Contato {
     @Column(name = "CON_NOME", length = 100)
     private String nome;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "CON_FON_ID")
     private Fone fone;
 

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Agenda</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Fone</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="contato : ${contatos}">
+                <td th:text="${contato.id}"></td>
+                <td th:text="${contato.nome}"></td>
+                <td th:text="${contato.fone.numero}"></td>
+                <td th:text="${contato.fone.tipo}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

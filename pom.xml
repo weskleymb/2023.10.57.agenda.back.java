@@ -22,6 +22,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <!-- starter-test: dependências para criar uma aplicação com testes -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
         <!-- starter-data-jpa: dependências para criar uma aplicação com JPA -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
