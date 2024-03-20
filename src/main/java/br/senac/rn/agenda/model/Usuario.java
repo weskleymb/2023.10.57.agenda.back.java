@@ -14,7 +14,7 @@ import java.util.List;
 public class Usuario implements UserDetails {
 
     @Id
-    @Column(name = "USU_USARIO")
+    @Column(name = "USU_USUARIO")
     private String usuario;
 
     @Column(name = "USU_SENHA")
@@ -26,8 +26,8 @@ public class Usuario implements UserDetails {
 
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinTable(
-            name = "TB_PAPEIS_USUARIO",
-            joinColumns = @JoinColumn(name = "PDU_USU_ID"),
+            name = "TB_PAPEIS_USUARIOS",
+            joinColumns = @JoinColumn(name = "PDU_USU_USUARIO"),
             inverseJoinColumns = @JoinColumn(name = "PDU_PAP_ID")
     )
 

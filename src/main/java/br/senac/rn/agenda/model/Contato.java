@@ -29,7 +29,7 @@ public class Contato {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Endereco endereco;
 
-    @JoinColumn(name = "CON_USU_USARIO")
+    @JoinColumn(name = "CON_USU_USUARIO")
     @ManyToOne(fetch = FetchType.EAGER)
     private Usuario usuario;
 
