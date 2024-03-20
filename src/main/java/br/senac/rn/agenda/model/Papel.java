@@ -5,8 +5,8 @@ import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 
 @Data
-@Table(name = "TB_PAPEIS")
 @Entity
+@Table(name = "TB_PAPEIS")
 public class Papel implements GrantedAuthority {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)

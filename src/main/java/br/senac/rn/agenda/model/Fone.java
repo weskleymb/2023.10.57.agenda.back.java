@@ -3,9 +3,9 @@ package br.senac.rn.agenda.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@Entity
-@Table(name = "TB_FONE")
 @Data
+@Entity
+@Table(name = "TB_FONES")
 public class Fone {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

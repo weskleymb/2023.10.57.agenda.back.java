@@ -7,7 +7,7 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "TB_CONTATO")
+@Table(name = "TB_CONTATOS")
 public class Contato {
 
     @Id
@@ -29,7 +29,7 @@ public class Contato {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     private Endereco endereco;
 
-    @JoinColumn(name = "USU_CON_ID")
+    @JoinColumn(name = "CON_USU_USARIO")
     @ManyToOne(fetch = FetchType.EAGER)
     private Usuario usuario;
 
