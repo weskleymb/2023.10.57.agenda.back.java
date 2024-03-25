@@ -17,9 +17,9 @@ public class SecurityWebConfig {
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         http
                 .authorizeHttpRequests(request -> request
-                        .requestMatchers("/").permitAll()
-                        .requestMatchers("usuario/**").permitAll()
-                        .requestMatchers("/usuarios").permitAll()
+                        .requestMatchers("/**").permitAll()
+//                        .requestMatchers("usuario/**").permitAll()
+//                        .requestMatchers("/usuarios").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(form -> form
