@@ -29,8 +29,9 @@ public class HomeController {
 
     @GetMapping
     public String index(Model model) {
-        String usuario = usuarioService.getUsuarioLogado().getUsuario();
-        List<Contato> contatos = service.listarPorUsuario(usuario);
+//        String usuario = usuarioService.getUsuarioLogado().getUsuario();
+//        List<Contato> contatos = service.listarPorUsuario(usuario);
+        List<Contato> contatos = service.listarTodos();
         model.addAttribute("contatos", contatos);
         return "index";
     }
